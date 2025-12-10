@@ -1,14 +1,14 @@
-def perform_operation(num1: float, num2: float, operation: str):
-
-    if operation == "add":
+def perform_operation(num1, num2, operation):
+    if operation == 'add':
         return num1 + num2
-    elif operation == "subtract":
+    elif operation == 'subtract':
         return num1 - num2
-    elif operation == "multiply":
+    elif operation == 'multiply':
         return num1 * num2
-    elif operation == "divide":
+    elif operation == 'divide':
         if num2 == 0:
-            return "Error: Division by zero"
+            raise ZeroDivisionError("Cannot divide by zero")
         return num1 / num2
+    
     else:
-        return "Error: Invalid operation"
+        raise ValueError(f"Invalid operation: '{operation}'.")
